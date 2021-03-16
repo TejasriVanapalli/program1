@@ -19,4 +19,5 @@ do
 	count=$(($count+1))
 done
 echo "values in array = ["${array[@]}"]"
-(for a in "${array[@]}"; do echo  "$a"; done | sort -nr )
+(for a in "${array[@]}"; do echo "$a"; done | sort -nr )
+(for a in "${array[@]}"; do echo "$a"; done | sort -n )

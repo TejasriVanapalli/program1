@@ -1,4 +1,4 @@
-#! /bin/bash -x
+#! /bin/bash 
 read -p "enter a number1:" a
 read -p "enter a number2:" b
 read -p "enter a number3:" c
@@ -13,5 +13,9 @@ numbers[sum3]="$sum3"
 numbers[sum4]="$sum4"
 
 declare -a array
-array="${numbers[@]}"
-echo ${array[@]}
+for value in ${numbers[@]}
+do 
+	array[$count]=$value
+	count=$(($count+1))
+done
+echo "values in array = ["${array[@]}"]"
